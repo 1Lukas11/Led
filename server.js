@@ -11,6 +11,7 @@ http.createServer(function(req,res){
   switch(req.url) { //#B
     case '/Led':
       // And return the corresponding JSON
+      Console.log("richtig");
       const spawn = require("child_process").spawn;
       const pythonProcess = spawn('python',["/fadeled.py", "-c"]);
       break;
